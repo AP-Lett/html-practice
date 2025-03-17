@@ -1,0 +1,23 @@
+<h1>Add a New Country</h1>
+
+<%= form_with model: @location do |form| %>
+  <p>
+    <%= form.label :country %><br>
+    <%= form.text_field :country %>
+  </p>
+
+  <p>
+  <%= form.label :capital %><br>
+  <%= form.text_field :capital %>
+  </p>
+
+  <p>
+  <%= form.label :fun_fact %><br>
+  <%= form.text_area :fun_fact %>
+  </p>
+
+  <%= form.submit 'Add Country' %>
+
+<% end %>
+
+<% link_to 'Back to Countries', locations_path %>
