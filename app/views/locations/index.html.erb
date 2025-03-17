@@ -1,0 +1,11 @@
+<h1>Countries</h1>
+
+<% if @locations.any? %>
+  <% @locations.each do |location| %>
+    <div class="location">
+    <h2><%= link_to location[:country], location_path(location[:id]) %></h2>
+    </div>
+  <% end %>
+<% else %>
+  <p>No locations available.</p>
+<% end %>
