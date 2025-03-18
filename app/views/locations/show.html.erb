@@ -5,4 +5,10 @@
 <p>Capital: <%= @location[:capital] %></p>
 <p>Fun Fact: <%= @location[:fun_fact] %></p>
 
-<%= link_to 'Back to Locations Index', locations_path %>
+<%= link_to 'Back to Countries Index', locations_path %>
+<br>
+<br>
+<%= link_to 'Edit Country Information', edit_location_path %>
+<br>
+<br>
+<%= button_to 'Delete Country', @location, method: :delete, data: { turbo_confirm: 'Are you sure you want to delete this location?' } %>
